@@ -1,13 +1,16 @@
 import axios from "axios";
-import { toast } from "react-toastify";
+
 const URL = import.meta.env.VITE_API_URL;
 
 const getTodos = async () => {
   try {
-    const { data } = await axios.get(URL);
+    const { status, data } = await axios.get(URL);
+    if (status !== 200) {
+      throw new Error("Something wrong");
+    }
     return data;
   } catch (error) {
-    toast.error(`${error.message}`);
+    throw new Error(error.message);
   }
 };
 

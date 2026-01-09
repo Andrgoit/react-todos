@@ -1,13 +1,15 @@
 import axios from "axios";
-import { toast } from "react-toastify";
 const URL = import.meta.env.VITE_API_URL;
 
 const deleteTodo = async (id) => {
   try {
-    const { data } = await axios.delete(`${URL}/${id}`);
+    const { data, status } = await axios.delete(`${URL}/${id}`);
+    if (status !== 200) {
+      throw new Error("Something wrong");
+    }
     return data;
   } catch (error) {
-    toast.error(`${error.message}`);
+    throw new Error(error.message);
   }
 };
 

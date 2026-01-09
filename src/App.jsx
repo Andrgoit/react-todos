@@ -11,8 +11,8 @@ const Layout = lazy(() => import("@/components/Layout/Layout"));
 function App() {
   return (
     <Routes>
-      <Route element={<Layout />}>
-        <Route path="/" element={<TodosPage />} />
+      <Route path="/" element={<Layout />}>
+        <Route index element={<TodosPage />} />
         <Route path="login" element={<LoginPage />} />
         <Route path="register" element={<RegisterPage />} />
         <Route path="*" element={<NotFoundPage />} />

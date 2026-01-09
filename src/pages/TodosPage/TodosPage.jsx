@@ -19,7 +19,7 @@ export default function TodosPage() {
         setTodos(data);
       } catch (error) {
         toast.error(`${error.message}`);
-        console.error("Error fetching todos:", error);
+        console.error("Error fetching todos:", error.message);
       }
     };
     fetchingTodos();
@@ -32,7 +32,7 @@ export default function TodosPage() {
       toast.success("The task added!");
     } catch (error) {
       toast.error(`${error.message}`);
-      console.error("Error adding todo:", error);
+      console.error("Error adding todo:", error.message);
     }
   };
 
@@ -45,7 +45,7 @@ export default function TodosPage() {
       toast.info("The task updated!");
     } catch (error) {
       toast.error(`${error.message}`);
-      console.error("Error changing todo:", error);
+      console.error("Error changing todo:", error.message);
     }
   };
 
@@ -56,7 +56,7 @@ export default function TodosPage() {
       toast.info("The task deleted!");
     } catch (error) {
       toast.error(`${error.message}`);
-      console.error("Error deleting todo:", error);
+      console.error("Error deleting todo:", error.message);
     }
   };
 
@@ -69,7 +69,7 @@ export default function TodosPage() {
       toast.success("Congratulation! The task is completed!");
     } catch (error) {
       toast.error(`${error.message}`);
-      console.error("Error completing todo:", error);
+      console.error("Error completing todo:", error.message);
     }
   };
 

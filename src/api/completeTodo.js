@@ -1,14 +1,15 @@
 import axios from "axios";
-import { toast } from "react-toastify";
 const URL = import.meta.env.VITE_API_URL;
 
 const completeTodo = async (id, update) => {
   try {
-    const { data } = await axios.patch(`${URL}/${id}`, update);
-
+    const { status, data } = await axios.patch(`${URL}/${id}`, update);
+    if (status !== 200) {
+      throw new Error("Something wrong");
+    }
     return data;
   } catch (error) {
-    toast.error(`${error.message}`);
+    throw new Error(error.message);
   }
 };
 
