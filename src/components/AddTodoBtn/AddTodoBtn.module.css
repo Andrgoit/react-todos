@@ -1,0 +1,74 @@
+.buttonWrapper {
+  display: flex;
+  max-width: 250px;
+  justify-content: center;
+  padding: 4px;
+}
+.button {
+  min-width: 200px;
+  padding: 4px;
+  outline: none;
+  color: #fff;
+  background: #00896f;
+  cursor: pointer;
+  border-radius: 10px;
+  /* box-shadow:
+    8px 8px 7px #a6a6a6,
+    -8px -8px 7px #ffffff; */
+}
+
+.disabledButton {
+  min-width: 200px;
+  padding: 4px;
+  outline: none;
+  border-radius: 10px;
+  cursor: not-allowed;
+  color: #000;
+  background-color: #a6a6a6;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 20px;
+}
+
+.formWrapper {
+  background-color: #bebebe;
+  border-radius: 18px;
+  padding: 10px;
+  min-width: 300px;
+  width: 100%;
+  max-width: 450px;
+}
+.formInput {
+  outline: none;
+  padding: 6px 6px;
+  border-radius: 8px;
+  box-shadow:
+    inset 3px 3px 5px #727272,
+    inset -3px -3px 5px #ffffff;
+}
+
+input:user-invalid {
+  outline: 1px solid #fb7575;
+}
+
+.formTextarea {
+  outline: none;
+  padding: 6px 6px;
+  border-radius: 8px;
+  box-shadow:
+    inset 3px 3px 5px #727272,
+    inset -3px -3px 5px #ffffff;
+  resize: none;
+  height: 110px;
+}
+
+.formSpan {
+  color: #00896f;
+}
+.formFailSpan {
+  color: #fb7575;
+}

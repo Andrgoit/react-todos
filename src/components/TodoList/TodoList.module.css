@@ -1,0 +1,21 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 800px;
+
+  border-radius: 20px;
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #33363f;
+  margin-bottom: 16px;
+
+  /* box-shadow:
+    inset 4px 4px 8px 0 rgba(174, 174, 192, 0.2),
+    inset -4px -4px 4px 0 rgba(255, 255, 255, 0.7);
+
+  box-shadow:
+    4px 4px 12px 0 rgba(174, 174, 192, 0.4),
+    -4px -4px 12px 0 #fff; */
+}
